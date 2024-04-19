@@ -16,8 +16,8 @@ const cards = [
   },
   {
     cardId: "4",
-    cardTitle: "React",
-    cardImage: "react.png"
+    cardTitle: "C++",
+    cardImage: "cplus.png"
   },
   {
     cardId: "5",

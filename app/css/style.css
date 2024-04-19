@@ -81,11 +81,11 @@ body {
 }
 
 .card__image {
-  width: 155px;
+  width: 120%;
   height: 130px;
   position: absolute;
   top: 20px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card__title {
