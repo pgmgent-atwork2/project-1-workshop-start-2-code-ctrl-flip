@@ -53,8 +53,11 @@
       <!--foto van folders en bestanden toevoegen-->
       <p>
         Bestanden toevoegen doe je door over de balk met bestanden te hoveren en
-        op het "<img src="" alt="" />"-icoontje te klikken. Folders toevoegen
-        doe je door op het "<img src="" alt="" />"-icoontje te klikken.
+        op het "<img src="./img/file.png" alt="" />"-icoontje te klikken.
+        Folders toevoegen doe je door op het "<img
+          src="./img/folder.png"
+          alt=""
+        />"-icoontje te klikken.
       </p>
       <ol>
         <li>
@@ -75,14 +78,174 @@
         </li>
       </ol>
 
-      <p>Als dit allemaal goed is verlopen, zal je deze mappenstructuur hebben:</p>
-      <img src="" alt=""> <!--foto van mappenstructuur en alle bestanden in de folders-->
+      <p>
+        Als dit allemaal goed is verlopen, zal je deze mappenstructuur hebben:
+      </p>
+      <img src="" alt="" />
+      <!--foto van mappenstructuur en alle bestanden in de folders-->
+
+      <h2>Extenties</h2>
+      <p>
+        Via Visual Studio install je een extentie. Klik op
+        <img src="" alt="" /> in het linker balk, zoek dan naar "Live Server" en
+        klik op "Install". Met deze extentie zal je live je app tot leven zien
+        komen.
+      </p>
+
+      <img class="full-image" src="./img/liveserver.png" alt="" />
+      <!--foto van live server extentie-->
+
+      <p>
+        Klik nu op "Go live" rechts onderaan op je scherm.
+        <img src="./img/golive.png" alt="" /> <br />Je krijgt een blanco pagina
+        te zien. Hier zal jouw memory game tevoorschijn komen.
+      </p>
 
       <h1>Stap 2: Let the coding begin!</h1>
       <h2>HTML</h2>
+      <p>
+        Net zoals een Word document eerst tekst nodig heeft vooraleer je stijlen
+        toevoegd, doen wij ook hetzelfde met coderen. <b>HTML</b>(<i
+          >Hyper Text Markup Language</i
+        >) Is vooral de structuur bepalen van hoe alles gezet wordt van titels,
+        afbeeldingen en texten.
+      </p>
+      <p>
+        In het bestand typen we <b>!</b> daarna klikken we op tab (de pijltjes
+        die dit doen <i class="fa-solid fa-arrow-right-arrow-left"></i> ).
+        Normaal zou je dan volgende code zien.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=htmlmixed&width=1280&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=17px&ph=55px&ln=false&fl=1&fm=Hack&fs=18px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%253E%250A%2520%2520%2520%2520%253Ctitle%253EDocument%253C%252Ftitle%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E%250A%2520%2520%2520%2520%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+        style="
+          width: 1280px;
+          height: 354px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      >
+      </iframe>
+      <p>
+        Deze code gaan wij dan aanpassen zodat het wat meer lijkt op
+        onderstaande code. De code kan je hieronder kopiëren en in jouw bestand
+        plakken.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=htmlmixed&width=1280&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%2520%2520%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%2520%252F%253E%250A%2520%2520%2520%2520%253Ctitle%253ECtrl%252BFlip%253C%252Ftitle%253E%250A%250A%2520%2520%2520%2520%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522.%252Fcss%252Fstyle.css%2522%2520%252F%253E%250A%2520%2520%253C%252Fhead%253E%250A%250A%2520%2520%253Cbody%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522nav-bar%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%253Cimg%2520class%253D%2522logo%2522%2520src%253D%2522.%252Fimages%252Flogo-artevelde.jpg%2522%2520alt%253D%2522Logo%2520van%2520Arteveldehogeschool%2522%2520%252F%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%253E%253Cb%253ECTRL%252BFLIP%253C%252Fb%253E%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Kevin%2520Dworschak%252C%2520Tess%2520Slock%2520%253Cbr%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2526%2520Lauren%2520Wille%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522all-cards%2522%2520id%253D%2522all-cards%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2522%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252Fhtml.png%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253Etitle%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fbody%253E%250A%2520%2520%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252F%2540tsparticles%252Fconfetti%25403.0.3%252Ftsparticles.confetti.bundle.min.js%2522%253E%253C%252Fscript%253E%250A%2520%2520%2520%2520%253Cscript%2520src%253D%2522.%252Fdata%252FcardData.js%2522%253E%253C%252Fscript%253E%250A%2520%2520%2520%2520%253Cscript%2520src%253D%2522.%252Fscript%252Fscript.js%2522%253E%253C%252Fscript%253E%250A%253C%252Fhtml%253E"
+        style="
+          width: 1280px;
+          height: 1038px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      >
+      </iframe>
 
+      <p>Als alles goed ging zien wij volgend resultaat. Bovenaan staat de logo. Daarna komt de titel en de namen van de makers, hier kan je jouw naam invullen. <br> Op het einde staat er één kaart zonder opmaak. Geen nood dit zal in het volgend stukje opgelost worden.</p>
+      <iframe width="100%" height="300" src="//jsfiddle.net/Justhigh/3mjc1nhb/1/embedded/html,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
       <h2>CSS</h2>
+      <p>Nu zullen we wat styling aan onze html bestand. Dit doen we door het gebruiken van een CSS-bestand. CSS staat voor 'Cascading Style Sheets'. </p>
       <h2>Javascript</h2>
+      <h3>Data</h3>
+      <p>
+        Maak in de folder "data" een bestand aan met de naam "cardData.js". Voeg
+        onderstaande data toe aan "cardData.js". De const 'cards' is een array.
+        Een array is altijd omgeven door vierkante haken "[ ]" en is een collectie
+        van items of objecten. Onze array is een collectie van objecten. Elk
+        object besschrijft de id (cardId), afbeeldingslink (cardImage) en titel
+        (cardTitle) van een card. Een object herken je aan de accolades "{ }" die errond staan.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520cards%2520%253D%2520%255B%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25221%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522HTML%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522html.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25222%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522CSS%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522css.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25223%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522JavaScript%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522javascript.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25224%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522C%252B%252B%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522cplus.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25225%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522JSON%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522json.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25226%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522PHP%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522php.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25227%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522MySQL%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522sql.png%2522%250A%2520%2520%257D%250A%255D"
+        style="
+          width: 299px;
+          height: 763px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      >
+      </iframe>
+      <h3>Random cards genereren</h3>
+        <p>
+          Eerst linken we het databestand en het Javascript-bestand in ons
+          html-bestand. Een standaardnaam voor een Javascript-bestand is
+          ‘script.js’.
+        </p>
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2520%253Cscript%2520src%253D%2522.%252Fdata%252FcardData.js%2522%253E%253C%252Fscript%253E%250A%2520%253Cscript%2520src%253D%2522.%252Fscript%252Fscript.js%2522%253E%253C%252Fscript%253E"
+          style="
+            width: 400px;
+            height: 111px;
+            border: 0;
+            transform: scale(1);
+            overflow: hidden;
+          "
+          sandbox="allow-scripts allow-same-origin"
+        >
+        </iframe>
+        <p>Open "script.js" en schrijf de volgende code in dit bestand.</p>
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=console.log%28%2522Hello%2520world%2522%29%253B"
+          style="
+            width: 265px;
+            height: 93px;
+            border: 0;
+            transform: scale(1);
+            overflow: hidden;
+          "
+          sandbox="allow-scripts allow-same-origin"
+        >
+        </iframe>
+        <p>
+          Open nu in je applicatie je console. Dit doe je op windows door Shift +
+          CTRL + J in te duwen op Microsoft of Shift + ⌘ + J op MacOS.
+        </p>
+        <p>Zo krijg je "Hello world" in de console te zien.</p>
+        <img
+          src="./img/screenshot1.jpg"
+          alt="De console toont 'Hello World'"
+        />
+        <p>
+          Vervang de console.log('Hello world') door console.log(cards). Je code
+          ziet er nu zo uit:
+        </p>
+        <iframe
+          src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=console.log%28cards%29%253B"
+          style="
+            width: 198px;
+            height: 93px;
+            border: 0;
+            transform: scale(1);
+            overflow: hidden;
+          "
+          sandbox="allow-scripts allow-same-origin"
+        >
+        </iframe>
+        <p>In de console zie je nu de kaartobjecten die we eerder hebben aangemaakt. Je kan dus in script.js aan de data in cardData.js omdat je deze scripts in je index.html hebt gelinkt</p>
+        <img src="./img/screenshot2.jpg" alt="De zeven card objects die in de console getoond worden.">
+        <p>Nu gaan we de cards die we eerder hebben gemaakt genereren aan de hand van onze data in cardData.js. We verplaatsen de card HTML nu naar een Javascript functie.</p>
+        <p>In de functie generateHTMLForCards mappen we over de array cards en maken we voor elk object in de array een card element aan. Onze HTML plaatsen we tussen template literals. Dit zijn schuine, enkele haakjes die het toestaan om Javascript te gebruiken binnen HTML.</p>
+      <h2>Extra!</h2>
+      <ul>
+        <li>
+          In de CSS file staat helemaal bij ":root" enkele kleuren. Deze kan je
+          zelf aanpassen naar de kleuren die jij wilt.
+        </li>
+        <li>
+          Je kan in de data file extra kaarten toevoegen, of de thema veranderen
+          naar wat jij wilt.
+        </li>
+      </ul>
     </main>
+    <script
+      src="https://kit.fontawesome.com/db5fbe6cb2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

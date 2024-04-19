@@ -55,3 +55,9 @@ a:hover {
   text-decoration: underline;
   text-decoration-color: var(--orange);
 }
+
+
+.full-image
+{
+  width: 1200px;
+}
