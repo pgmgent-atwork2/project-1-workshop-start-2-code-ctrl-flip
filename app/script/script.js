@@ -1,19 +1,20 @@
 const $cardContainer = document.getElementById('all-cards');
 
-function generateRandomCards (array) {
+function randomiseCards(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+}
+
+function generateCards (array) {
+    randomiseCards(array)
 
     let totalCards = array.slice(0, 6);
 
     totalCards = totalCards.flatMap(i => [i, i]);
 
-    for (let i = totalCards.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [totalCards[i], totalCards[j]] = [totalCards[j], totalCards[i]];
-    }
+    randomiseCards(totalCards)
 
     return totalCards;
 }
@@ -32,7 +33,7 @@ function generateHTMLForCards (cards) {
 };
 
 function generateUIForCards() {
-    const randomCards = generateRandomCards(cards)
+    const randomCards = generateCards(cards)
     $cardContainer.innerHTML = generateHTMLForCards(randomCards)
 }
 
