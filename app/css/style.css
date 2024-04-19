@@ -11,7 +11,7 @@ body {
   font-weight: 400;
   word-wrap: break-word;
   background-color: black;
-  color: white
+  color: white;
 }
 
 .logo {
@@ -50,6 +50,8 @@ body {
   height: 264px;
   background: white;
   border-radius: 15px;
+}
+.card__front {
   position: relative;
   display: flex;
   justify-content: center;

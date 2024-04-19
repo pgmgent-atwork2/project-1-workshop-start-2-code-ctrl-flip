@@ -1,40 +1,46 @@
-const $cardContainer = document.getElementById('all-cards');
+const $cardContainer = document.getElementById("all-cards");
 
 function randomiseCards(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
 }
 
-function generateCards (array) {
-    randomiseCards(array)
+function generateCards(array) {
+  randomiseCards(array);
 
-    let totalCards = array.slice(0, 6);
+  let totalCards = array.slice(0, 6);
 
-    totalCards = totalCards.flatMap(i => [i, i]);
+  totalCards = totalCards.flatMap((i) => [i, i]);
 
-    randomiseCards(totalCards)
+  randomiseCards(totalCards);
 
-    return totalCards;
+  return totalCards;
 }
 
-function generateHTMLForCards (cards) {
-    return cards.map(item =>
+function generateHTMLForCards(cards) {
+  return cards
+    .map(
+      (item) =>
         `
             <div class="card">
                 <div class="card__inside">
-                <img class="card__image" src="./images/${item.cardImage}" />
-                <div class="card__title">${item.cardTitle}</div>
+                    <div class="card__front">
+                        <img class="card__image" src="./images/${item.cardImage}" />
+                        <div class="card__title">${item.cardTitle}</div>
+                    </div>
+                    <div class="card__back"></div>
                 </div>
             </div>
         `
-    ).join('');
-};
+    )
+    .join("");
+}
 
 function generateUIForCards() {
-    const randomCards = generateCards(cards)
-    $cardContainer.innerHTML = generateHTMLForCards(randomCards)
+  const randomCards = generateCards(cards);
+  $cardContainer.innerHTML = generateHTMLForCards(randomCards);
 }
 
 generateUIForCards();
