@@ -64,17 +64,41 @@ function checkCards() {
           selectedCards.forEach((card) => {
             setTimeout(() => {
               card.classList.toggle("flipped");
-            }, 1000);
+            }, 500);
           });
         }
         selectedCards = [];
 
         if (counter === 6) {
+          const end = Date.now() + 15 * 1000;
+
+          const colors = ["#EE9900", "#00AACC", "#CE0C7D"];
+
+          (function frame() {
+            confetti({
+              particleCount: 2,
+              angle: 60,
+              spread: 55,
+              origin: { x: 0 },
+              colors: colors,
+            });
+
+            confetti({
+              particleCount: 2,
+              angle: 120,
+              spread: 55,
+              origin: { x: 1 },
+              colors: colors,
+            });
+
+            if (Date.now() < end) {
+              requestAnimationFrame(frame);
+            }
+          })();
           setTimeout(() => {
             alert("Congratulations! You have found all the combinations!");
             location.reload();
-          }, 1000);
-          
+          }, 3500);
         }
       }
     });
