@@ -24,7 +24,7 @@ function generateHTMLForCards(cards) {
     .map(
       (item) =>
         `
-            <div class="card">
+            <div class="card" data-id=${item.cardId}>
                 <div class="card__inside">
                     <div class="card__front">
                         <img class="card__image" src="./images/${item.cardImage}" />
@@ -38,9 +38,33 @@ function generateHTMLForCards(cards) {
     .join("");
 }
 
+function checkCards() {
+  const $allCards = document.querySelectorAll(".card");
+
+  let selectedCards = [];
+
+  $allCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      card.classList.toggle("selected");
+
+      selectedCards.push(card);
+
+      if (selectedCards.length === 2) {
+        if (selectedCards[0].dataset.id === selectedCards[1].dataset.id) {
+          console.log("the same");
+        } else {
+          console.log("not the same");
+        }
+        selectedCards = [];
+      }
+    });
+  });
+}
+
 function generateUIForCards() {
   const randomCards = generateCards(cards);
   $cardContainer.innerHTML = generateHTMLForCards(randomCards);
+  checkCards();
 }
 
 generateUIForCards();
