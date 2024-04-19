@@ -45,6 +45,9 @@ body {
   align-items: center;
   perspective: 1000px;
 }
+.card:hover {
+  cursor: pointer;
+}
 
 .card__inside {
   width: 170px;
