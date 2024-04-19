@@ -28,8 +28,8 @@ body {
 
 .all-cards {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  width: 1091px;
+  grid-template-columns: repeat(6, 1fr);
+  width: 1230px;
   height: 380px;
   margin: 0 auto;
   gap: 1rem;
