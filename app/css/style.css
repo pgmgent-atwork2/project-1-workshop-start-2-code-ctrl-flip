@@ -43,6 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  perspective: 1000px;
 }
 
 .card__inside {
@@ -50,11 +51,30 @@ body {
   height: 264px;
   background: white;
   border-radius: 15px;
+  transform-style: preserve-3d;
+  position: relative;
 }
 .card__front {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.card__back,
+.card__front {
+  position: relative;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+.card__back {
+  transform: rotateY(0deg);
+}
+.card.flipped .card__inside {
+  transform: rotateY(180deg);
+}
+.card:not(.flipped) .card__inside {
+  transform: rotateY(0deg);
 }
 
 .card__image {

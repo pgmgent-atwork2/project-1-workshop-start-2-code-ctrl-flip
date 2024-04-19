@@ -45,7 +45,7 @@ function checkCards() {
 
   $allCards.forEach((card) => {
     card.addEventListener("click", function () {
-      card.classList.toggle("selected");
+      card.classList.toggle("flipped");
 
       selectedCards.push(card);
 
