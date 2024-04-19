@@ -1,3 +1,9 @@
+:root {
+  --orange: #ee9900;
+  --white: #ffffff;
+  --black: #000000;  
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("ttf");
@@ -10,8 +16,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .logo {
@@ -38,7 +44,7 @@ body {
 .card {
   width: 190px;
   height: 280px;
-  background: #ee9900;
+  background: var(--orange);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -52,7 +58,7 @@ body {
 .card__inside {
   width: 170px;
   height: 264px;
-  background: white;
+  background: var(--white);
   border-radius: 15px;
   transform-style: preserve-3d;
   position: relative;
@@ -93,7 +99,7 @@ body {
   top: 215px;
   position: absolute;
   text-align: center;
-  color: black;
+  color: var(--black);
   font-size: 29px;
 }
 

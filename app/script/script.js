@@ -20,23 +20,22 @@ function generateCards(array) {
 }
 
 function generateHTMLForCards(cards) {
-  return cards
-    .map(
-      (item) =>
-        `
-            <div class="card" data-id=${item.cardId}>
-                <div class="card__inside">
-                    <div class="card__front">
-                        <img class="card__image" src="./images/${item.cardImage}" />
-                        <div class="card__title">${item.cardTitle}</div>
-                    </div>
-                    <div class="card__back"></div>
-                </div>
+  return cards.map((item) =>
+    `
+      <div class="card" data-id=${item.cardId}>
+        <div class="card__inside">
+          <div class="card__front">
+            <img class="card__image" src="./images/${item.cardImage}" />
+              <div class="card__title">${item.cardTitle}</div>
             </div>
-        `
-    )
-    .join("");
-}
+          <div class="card__back"></div>
+        </div>
+      </div>
+    `
+  ).join("");
+};
+
+console.log(generateHTMLForCards(cards));
 
 function checkCards() {
   const $allCards = document.querySelectorAll(".card");
