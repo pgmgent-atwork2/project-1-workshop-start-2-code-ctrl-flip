@@ -43,6 +43,8 @@ function checkCards() {
 
   let selectedCards = [];
 
+  let counter = 0;
+
   $allCards.forEach((card) => {
     card.addEventListener("click", function () {
       card.classList.toggle("flipped");
@@ -52,10 +54,28 @@ function checkCards() {
       if (selectedCards.length === 2) {
         if (selectedCards[0].dataset.id === selectedCards[1].dataset.id) {
           console.log("the same");
+          counter++;
+          console.log(counter);
+          selectedCards.forEach((card) => {
+            card.style.pointerEvents = "none";
+          });
         } else {
           console.log("not the same");
+          selectedCards.forEach((card) => {
+            setTimeout(() => {
+              card.classList.toggle("flipped");
+            }, 1000);
+          });
         }
         selectedCards = [];
+
+        if (counter === 6) {
+          setTimeout(() => {
+            alert("Congratulations! You have found all the combinations!");
+            location.reload();
+          }, 1000);
+          
+        }
       }
     });
   });
