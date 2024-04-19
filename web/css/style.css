@@ -1,0 +1,57 @@
+:root {
+  --orange: #ee9900;
+  --white: #fff;
+  --black: #000;
+  --blue: #3ba3d9;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("ttf");
+  font-weight: 400;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  max-width: 1230px;
+}
+
+main {
+  max-width: 1230px;
+}
+
+.nav-bar {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--blue);
+}
+
+.logo {
+  width: 8rem;
+}
+
+.nav-bar p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+}
