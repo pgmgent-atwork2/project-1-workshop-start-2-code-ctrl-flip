@@ -87,7 +87,12 @@ body {
   top: 20px;
   object-fit: contain;
 }
-
+.card__image--back {
+  object-fit: contain;
+  width: 100%;
+  position: absolute;
+  top: 95px;
+}
 .card__title {
   width: 100%;
   top: 215px;
