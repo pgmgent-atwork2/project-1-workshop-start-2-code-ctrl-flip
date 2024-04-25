@@ -354,14 +354,18 @@
         aanpassen.
       </p>
       <p>
-        Via de getElementById methode haal je het element op met de klasse
-        'all-cards'. Door de methode innerHTML op dit $cardContainer element te
+        Via de getElementById methode haal je het element op met de id
+        'all-cards'. Door de methode innerHTML op het $cardContainer element te
         gebruiken, kan je de HTML die we in de generateHTMLForCards functie
-        gemaakt hebben binnen de div met klass 'all-cards' plaatsen.
+        gemaakt hebben binnen de div met id 'all-cards' plaatsen.
       </p>
       <p>
         Tenslotte roep je de functie generateUIForCards() op om deze tot uiting
         te brengen.
+      </p>
+      <p>
+        Vervang de code in je script.js bestand door onderstaande code en bekijk het
+        resultaat in je browser.
       </p>
       <iframe
         src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520%2524cardContainer%2520%253D%2520document.getElementById%28%2522all-cards%2522%29%253B%250A%250A%250Afunction%2520generateHTMLForCards%28cards%29%2520%257B%250A%2520%2520return%2520cards.map%28%28item%29%2520%253D%253E%250A%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2524%257Bitem.cardId%257D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252F%2524%257Bitem.cardImage%257D%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253E%2524%257Bitem.cardTitle%257D%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2560%250A%2520%2520%29.join%28%2522%2522%29%253B%250A%257D%253B%250A%250A%250Afunction%2520generateUIForCards%28%29%2520%257B%250A%2520%2520%2524cardContainer.innerHTML%2520%253D%2520generateHTMLForCards%28cards%29%253B%250A%257D%250A%250A%250AgenerateUIForCards%28%29%253B"
@@ -377,9 +381,9 @@
       <p>Nu zal je de gegenereerde kaartjes zien.</p>
       <p>Nu willen we de kaarten nog willekeurig kunnen genereren.</p>
       <p>
-        Om dit te doen maken we twee functies aan. In randomiseCards maken we
+        Om dit te doen maken we twee functies aan. In randomiseCards schrijven we
         een functie die de volgorde binnen een array willekeurig maakt. In
-        generateCards zullen we de array cards aanpassen zodat deze willekeurig
+        generateCards zullen we de array "cards" aanpassen zodat deze willekeurig
         is en elke kaart twee keer bevat.
       </p>
       <p>
@@ -402,21 +406,12 @@
         Nu kan je in generateCards de functie randomiseCards gebruiken om de
         volgorde van de card array willekeurig te maken. Dit doe je door de
         cards array mee te geven aan de randomiseCards functie. Hierna gebruik
-        je de slice methode om de array 6 elementen lang te worden. Wanneer je
-        totalCards nu logt, krijg je een array van 6 elementen in een
-        willekeurige volgorde terug.
+        je de slice methode om de array 6 elementen lang te maken. 
       </p>
       <iframe
-        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520generateCards%28%29%2520%257B%250A%2520%2520randomiseCards%28cards%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%257D"
-        style="
-          width: 800px;
-          height: 167px;
-          border: 0;
-          transform: scale(1);
-          overflow: hidden;
-        "
-        sandbox="allow-scripts allow-same-origin"
-      ></iframe>
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=javascript&width=1280&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=133%25&si=false&es=2x&wm=false&code=function%2520generateCards%28array%29%2520%257B%250A%2520%2520randomiseCards%28cards%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%257D"
+  style="width: 1280px; height: 177px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin"></iframe>
       <p>
         Omdat je in memory op zoek moet naar twee dezelfde kaarten, moet je nu
         de objecten in de array verdubbelen. Dit kan je doen aan de hand van een
@@ -465,15 +460,15 @@
         "
         sandbox="allow-scripts allow-same-origin"
       ></iframe>
-
+      <h3> Klik functie</h3>
       <p>
         Nu schrijven we de logica om te controleren of twee aangeklikte kaarten
         gelijk zijn aan elkaar. Maak een functie 'checkCards()' aan, tussen de
         functie 'generateHTMLForCards(cards) en 'generateUIForCards()'. Eerst
-        moeten we dus de kaarten aanklikbaar maken, dit doen we door alle
+        moeten we dus de kaarten aanklikbaar maken. Dit doen we door alle
         kaarten die in de HTML zitten te overlopen (dit noemt men itereren) en
         aan elke kaart een event listener toe te voegen. Dit doet exact wat het
-        zegt, het 'luistert' voor events. Je code zal er zo uitzien:
+        zegt, het 'luistert' voor events. Schrijf "checkCards()" in generateUIForCards. Je code zal er zo uitzien:
       </p>
       <iframe
         src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520checkCards%28%29%2520%257B%250A%2520%2520%2520%2520const%2520%2524allCards%2520%253D%2520document.querySelectorAll%28%2522.card%2522%29%253B%250A%2520%2520%250A%2520%2520%2520%2520%2524allCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520card.addEventListener%28%2522click%2522%252C%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log%28%2522Card%2520click%2522%29%250A%2520%2520%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%257D%29%250A%257D"
@@ -487,13 +482,13 @@
         sandbox="allow-scripts allow-same-origin"
       ></iframe>
       <p>
-        Telkens als je op een kaart klikt, zal je nu 'Card clicked' in je
+        Telkens als je op een kaart klikt, zal je nu 'Card click' in je
         console zien.
       </p>
       <p>
         In de CSS hebben we een klasse 'flipped' toegevoegd. Dit voegen we toe
         en verwijderen we telkens als we op de kaart klikken. Vervang
-        'console.log("Card clicked");' door onderstaande code:
+        'console.log("Card click");' door onderstaande code:
       </p>
       <iframe
         src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=card.classList.toggle%28%2522flipped%2522%29%253B"
