@@ -31,7 +31,7 @@ function generateHTMLForCards(cards) {
                         <div class="card__title">${item.cardTitle}</div>
                     </div>
                     <div class="card__back">
-                    <img class="card__image" src="./images/logo.png" />
+                    <img class="card__image--back" src="./images/logo.png" />
                     </div>
                 </div>
             </div>
