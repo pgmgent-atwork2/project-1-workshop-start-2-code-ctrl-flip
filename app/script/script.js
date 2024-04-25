@@ -24,20 +24,17 @@ function generateHTMLForCards(cards) {
     .map(
       (item) =>
         `
-            <div class="card" data-id=${item.cardId}>
-                <div class="card__inside">
-                    <div class="card__front">
-                        <img class="card__image" src="./images/${item.cardImage}" />
-                        <div class="card__title">${item.cardTitle}</div>
-                    </div>
-                    <div class="card__back">
-                    <img class="card__image--back" src="./images/logo.png" />
-                    </div>
-                </div>
+        <div class="card" data-id=${item.cardId}>
+        <div class="card__inside">
+            <div class="card__front">
+                <img class="card__image" src="./images/${item.cardImage}" />
+                <div class="card__title">${item.cardTitle}</div>
             </div>
-          <div class="card__back"></div>
+            <div class="card__back">
+            <img class="card__image--back" src="./images/logo.png" />
+            </div>
         </div>
-      </div>
+    </div>
     `
     )
     .join("");
