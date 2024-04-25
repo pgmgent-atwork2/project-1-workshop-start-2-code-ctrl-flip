@@ -35,10 +35,14 @@ function generateHTMLForCards(cards) {
                     </div>
                 </div>
             </div>
-        `
-    )
-    .join("");
-}
+          <div class="card__back"></div>
+        </div>
+      </div>
+    `
+  ).join("");
+};
+
+console.log(generateHTMLForCards(cards));
 
 // function checkCards() {
 //   const $allCards = document.querySelectorAll(".card");
