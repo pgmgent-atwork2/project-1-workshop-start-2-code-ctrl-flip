@@ -45,6 +45,15 @@ h1 {
 .nav-bar p {
   text-align: center;
 }
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.flex div {
+  margin-left: -4.4375rem;
+}
 
 a {
   text-decoration: none;

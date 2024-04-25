@@ -26,7 +26,15 @@ body {
   margin-bottom: 1rem;
   align-items: center;
 }
-
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.flex div {
+  margin-left: -4.4375rem;
+}
 .all-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
