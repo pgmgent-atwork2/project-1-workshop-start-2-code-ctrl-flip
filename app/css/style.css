@@ -1,15 +1,18 @@
 :root {
   --orange: #ee9900;
   --white: #ffffff;
-  --black: #000000;  
+  --black: #000000;
+  --blue: #3ba3d9;
 }
 
+/*1: FONTS*/
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("ttf");
   font-weight: 400;
 }
 
+/*2: GENERAL STYLING*/
 body {
   margin: 0 auto;
   overflow-x: hidden;
@@ -20,6 +23,18 @@ body {
   color: var(--white);
 }
 
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+}
+
+/*3: TOP NAVIGATION BAR*/
 .logo {
   width: 8rem;
 }
@@ -30,8 +45,12 @@ body {
   width: 100%;
   justify-content: space-around;
   margin-bottom: 1rem;
-  align-items: center;
 }
+
+div p {
+  text-align: center;
+}
+
 .flex {
   display: flex;
   justify-content: center;
@@ -41,6 +60,8 @@ body {
 .flex div {
   margin-left: -4.4375rem;
 }
+
+/*4: CARDS*/
 .all-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -72,6 +93,24 @@ body {
   transform-style: preserve-3d;
   position: relative;
 }
+
+.card__image {
+  width: 120%;
+  height: 130px;
+  position: absolute;
+  top: 20px;
+  object-fit: contain;
+}
+
+.card__title {
+  width: 100%;
+  top: 215px;
+  position: absolute;
+  text-align: center;
+  color: var(--black);
+  font-size: 29px;
+}
+
 .card__front {
   position: absolute;
   display: flex;
@@ -93,40 +132,4 @@ body {
 }
 .card:not(.flipped) .card__inside {
   transform: rotateY(0deg);
-}
-
-.card__image {
-  width: 120%;
-  height: 130px;
-  position: absolute;
-  top: 20px;
-  object-fit: contain;
-}
-.card__image--back {
-  object-fit: contain;
-  width: 100%;
-  position: absolute;
-  top: 95px;
-}
-.card__title {
-  width: 100%;
-  top: 215px;
-  position: absolute;
-  text-align: center;
-  color: var(--black);
-  font-size: 29px;
-}
-
-div p {
-  text-align: center;
-}
-a {
-  text-decoration: none;
-  color: #3ba3d9;
-}
-
-a:hover {
-  color: #ee9900;
-  text-decoration: underline;
-  text-decoration-color: #ee9900;
 }
