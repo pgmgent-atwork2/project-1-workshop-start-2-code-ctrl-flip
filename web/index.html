@@ -1,11 +1,785 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Documentation | Ctrl+Flip</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css.reset.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div>
+        <img
+          class="logo"
+          src="./img/logo-artevelde.jpg"
+          alt="Logo van Arteveldehogeschool"
+/>
+      </div>
+      <div>
+
+        <b>CTRL+FLIP</b>
+
+      </div>
+      <div>
+        <p>
+          Kevin Dworschak, Tess Slock <br/>
+          & Lauren Wille
+        </p>
+      </div>
+    </div>
+    <div class="flex">
+      <div>
+        <a href="../app/index.html">Application</a>
+
+      </div>
+    </div>
+
+    <main>
+      <h1>Stap 1: Opstart van project</h1>
+
+      <p>
+        Om ons spel te coderen, heb je Visual Studio Code nodig. Het programma
+        kan je
+        <a href="https://code.visualstudio.com/" target="_blank">hier</a>
+        downloaden.
+      </p>
+
+      <p>
+        De memory game zullen we maken met HTML, CSS en Javascript. Nog geen
+        kennis van programmeren? Geen probleem! We leggen het hieronder stap
+        voor stap uit.
+      </p>
+
+      <h2>Mappenstructuur</h2>
+      <p>
+        Download <a href="./assets.zip">
+          <b>hier</b>
+        </a> de startstructuur. Je vindt hierin 5 mappen: een
+        CSS, een data, een fonts, een script, een images folder en een "index.html"
+        bestand.
+      </p>
+
+      <p>
+       Je mappenstructuur zou er zo moeten uitzien:
+      </p>
+      <img src="./img/mappenstructuur.png" alt="mappenstructuur"/>
+
+      <h2>Extenties</h2>
+      <p>
+        Via Visual Studio installeer je een extentie. Klik op
+        <img src="./img/extensions.png" alt="extensies"/> in de linkerbalk, zoek dan naar "Live Server" en
+        klik op "Install". Met deze extentie zal je live je app tot leven zien
+        komen.
+      </p>
+
+      <img class="full-image" src="./img/liveserver.png" alt="foto van live server extentie"/>
+
+      <p>
+        Selecteer nu index.html en klik op "Go live" rechts onderaan op je scherm.
+        <img src="./img/golive.png" alt="foto go live knop"/>
+        <br/>Je krijgt een blanco pagina te zien. Hier zal jouw memory game
+        tevoorschijn komen.
+      </p>
+
+      <h1>Stap 2: Let the coding begin!</h1>
+      <h2>HTML</h2>
+      <p>
+        Net zoals een Word document eerst tekst nodig heeft vooraleer je stijlen
+        toevoegt, doen wij ook hetzelfde met coderen. <b>HTML</b>(<i
+          >Hyper Text Markup Language</i
+        >) Is vooral de structuur bepalen van hoe alles gezet wordt van titels,
+        afbeeldingen en teksten.
+      </p>
+      <p>
+        In het bestand typen we <b>!</b> daarna klikken we op tab (de pijltjes
+        die dit doen <i class="fa-solid fa-arrow-right-arrow-left"></i> ).
+        Normaal zou je dan volgende code zien.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=htmlmixed&width=1280&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=17px&ph=55px&ln=false&fl=1&fm=Hack&fs=18px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%253E%250A%2520%2520%2520%2520%253Ctitle%253EDocument%253C%252Ftitle%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E%250A%2520%2520%2520%2520%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+        style="
+          width: 1280px;
+          height: 360px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Deze code gaan wij dan aanpassen zodat het wat meer lijkt op
+        onderstaande code. De code kan je hieronder kopiëren en in jouw bestand
+        plakken.
+      </p>
+      <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=htmlmixed&width=1280&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522en%2522%253E%250A%2520%2520%253Chead%253E%250A%2520%2520%2520%2520%253Cmeta%2520charset%253D%2522UTF-8%2522%252F%253E%250A%2520%2520%2520%2520%253Cmeta%2520name%253D%2522viewport%2522%2520content%253D%2522width%253Ddevice-width%252C%2520initial-scale%253D1.0%2522%252F%253E%250A%2520%2520%2520%2520%253Ctitle%253ECtrl%252BFlip%253C%252Ftitle%253E%250A%250A%2520%2520%2520%2520%253Clink%2520rel%253D%2522stylesheet%2522%2520href%253D%2522.%252Fcss%252Fstyle.css%2522%252F%253E%250A%2520%2520%253C%252Fhead%253E%250A%250A%2520%2520%253Cbody%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522nav-bar%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%253Cimg%2520class%253D%2522logo%2522%2520src%253D%2522.%252Fimages%252Flogo-artevelde.jpg%2522%2520alt%253D%2522Logo%2520van%2520Arteveldehogeschool%2522%252F%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cb%253ECTRL%252BFLIP%253C%252Fb%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cp%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520Kevin%2520Dworschak%252C%2520Tess%2520Slock%2520%253Cbr%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2526%2520Lauren%2520Wille%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fp%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522flex%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522..%252Fweb%252Findex.html%2522%253EDocumentation%253C%252Fa%253E%250A%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%253Cdiv%2520class%253D%2522all-cards%2522%2520id%253D%2522all-cards%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2522%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252Fhtml.png%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253Etitle%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fbody%253E%250A%2520%2520%253Cscript%2520src%253D%2522https%253A%252F%252Fcdn.jsdelivr.net%252Fnpm%252F%2540tsparticles%252Fconfetti%25403.0.3%252Ftsparticles.confetti.bundle.min.js%2522%253E%253C%252Fscript%253E%250A%2520%2520%253Cscript%2520src%253D%2522.%252Fdata%252FcardData.js%2522%253E%253C%252Fscript%253E%250A%2520%2520%253Cscript%2520src%253D%2522.%252Fscript%252Fscript.js%2522%253E%253C%252Fscript%253E%250A%253C%252Fhtml%253E"
+  style="width: 1280px; height: 1230px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin"></iframe>
+
+      <p>
+        Als alles goed ging zien wij volgend resultaat. Bovenaan staat het logo.
+        Daarna komt de titel en de namen van de makers, hier kan je jouw naam
+        invullen. <br/>
+        Op het einde staat er één kaart zonder opmaak. Geen nood dit zal in het
+        volgend stukje opgelost worden.
+      </p>
+      <img src="./img/results-html.png" style="width: 100%; object-fit: contain;" alt="">
+      <h2>CSS</h2>
+      <p>
+        Nu zullen we wat styling aan onze html bestand toevoegen. Dit doen we door het
+        gebruiken van een CSS-bestand. CSS staat voor 'Cascading Style Sheets'.
+      </p>
+
+      <p>
+        Als 'style.css' niet zou werken, of deze perongelijk verwijderd wordt,
+        wordt de styling van 'reset.css' toegepast. Dit is ee document die
+        gegeven wordt van Arteveldehogeschool.
+      </p>
+
+      <p>
+        Nu zullen we zelf onze eigen stijling toevoegen. Kopieer onderstaande
+        code, en voeg deze toe aan 'style.css'. Onder de code vind je nog even
+        wat uitleg van belangrijke stukken code.
+      </p>
+
+      <iframe
+  src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=css&width=1280&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=18px&lh=133%25&si=false&es=2x&wm=false&code=%252F*1%253A%2520FONTS*%252F%250A%2540font-face%2520%257B%250A%2520%2520font-family%253A%2520%2522Roboto%2522%253B%250A%2520%2520src%253A%2520url%28%2522..%252Ffonts%252FRoboto-Regular.ttf%2522%29%2520format%28%2522ttf%2522%29%253B%250A%2520%2520font-weight%253A%2520400%253B%250A%257D%250A%250A%252F*2%253A%2520GENERAL%2520STYLING*%252F%250Abody%2520%257B%250A%2520%2520margin%253A%25200%2520auto%253B%250A%2520%2520overflow-x%253A%2520hidden%253B%250A%2520%2520font-family%253A%2520%2522Roboto%2522%252C%2520sans-serif%253B%250A%2520%2520font-weight%253A%2520400%253B%250A%2520%2520word-wrap%253A%2520break-word%253B%250A%2520%2520background-color%253A%2520black%253B%250A%2520%2520color%253A%2520white%253B%250A%257D%250A%250A%252F*3%253A%2520TOP%2520NAVIGATION%2520BAR*%252F%250A.logo%2520%257B%250A%2520%2520width%253A%25208rem%253B%250A%257D%250A%250A.nav-bar%2520%257B%250A%2520%2520display%253A%2520flex%253B%250A%2520%2520height%253A%252050px%253B%250A%2520%2520width%253A%2520100%2525%253B%250A%2520%2520justify-content%253A%2520space-around%253B%250A%2520%2520margin-bottom%253A%25201rem%253B%250A%257D%250A%250Adiv%2520p%2520%257B%250A%2520%2520text-align%253A%2520center%253B%250A%257D%250A%250A.flex%2520%257B%250A%2520%2520display%253A%2520flex%253B%250A%2520%2520justify-content%253A%2520center%253B%250A%2520%2520align-items%253A%2520center%253B%250A%2520%2520margin-bottom%253A%25201rem%253B%250A%257D%250A.flex%2520div%2520%257B%250A%2520%2520margin-left%253A%2520-4.4375rem%253B%250A%257D%250A%250A%252F*4%253A%2520CARDS*%252F%250A.all-cards%2520%257B%250A%2520%2520display%253A%2520grid%253B%250A%2520%2520grid-template-columns%253A%2520repeat%286%252C%25201fr%29%253B%250A%2520%2520width%253A%25201230px%253B%250A%2520%2520height%253A%2520380px%253B%250A%2520%2520margin%253A%25200%2520auto%253B%250A%2520%2520gap%253A%25201rem%253B%250A%257D%250A%250A.card%2520%257B%250A%2520%2520width%253A%2520190px%253B%250A%2520%2520height%253A%2520280px%253B%250A%2520%2520background%253A%2520%2523ee9900%253B%250A%2520%2520border-radius%253A%252015px%253B%250A%2520%2520display%253A%2520flex%253B%250A%2520%2520justify-content%253A%2520center%253B%250A%2520%2520align-items%253A%2520center%253B%250A%2520%2520perspective%253A%25201000px%253B%250A%257D%250A.card%253Ahover%2520%257B%250A%2520%2520cursor%253A%2520pointer%253B%250A%257D%250A%250A.card__inside%2520%257B%250A%2520%2520width%253A%2520170px%253B%250A%2520%2520height%253A%2520264px%253B%250A%2520%2520background%253A%2520white%253B%250A%2520%2520border-radius%253A%252015px%253B%250A%2520%2520transform-style%253A%2520preserve-3d%253B%250A%2520%2520position%253A%2520relative%253B%250A%257D%250A%250A.card__image%2520%257B%250A%2520%2520width%253A%2520120%2525%253B%250A%2520%2520height%253A%2520130px%253B%250A%2520%2520position%253A%2520absolute%253B%250A%2520%2520top%253A%252020px%253B%250A%2520%2520object-fit%253A%2520contain%253B%250A%257D%250A%250A.card__title%2520%257B%250A%2520%2520width%253A%2520100%2525%253B%250A%2520%2520top%253A%2520215px%253B%250A%2520%2520position%253A%2520absolute%253B%250A%2520%2520text-align%253A%2520center%253B%250A%2520%2520color%253A%2520black%253B%250A%2520%2520font-size%253A%252029px%253B%250A%257D%250A%250A.card__front%2520%257B%250A%2520%2520position%253A%2520absolute%253B%250A%2520%2520display%253A%2520flex%253B%250A%2520%2520justify-content%253A%2520center%253B%250A%2520%2520transform%253A%2520rotateY%28180deg%29%253B%250A%257D%250A%250A.card__back%252C%250A.card__front%2520%257B%250A%2520%2520position%253A%2520relative%253B%250A%2520%2520backface-visibility%253A%2520hidden%253B%250A%2520%2520transition%253A%2520transform%25200.5s%253B%250A%257D%250A.card__back%2520%257B%250A%2520%2520transform%253A%2520rotateY%280deg%29%253B%250A%257D%250A.card.flipped%2520.card__inside%2520%257B%250A%2520%2520transform%253A%2520rotateY%28180deg%29%253B%250A%257D%250A.card%253Anot%28.flipped%29%2520.card__inside%2520%257B%250A%2520%2520transform%253A%2520rotateY%280deg%29%253B%250A%257D"
+  style="width: 1280px; height: 2858px; border:0; transform: scale(1); overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin"></iframe>
+
+      <ol>
+        <li>
+          De font 'Roboto' wordt geïmporteert via een font-face zodat we deze
+          kunnen gebruiken.
+        </li>
+        <br/>
+        <li>
+          Er worden enkele aanpassingen aan de body van de website gemaakt.
+          <ul>
+            <li>
+              We verwijderen de ruimte boven en onder de website, en zorgen dat
+              alles in het midden staat via 'auto' toe te voegen bij margin.
+            </li>
+            <li>
+              We geven aan dat er geen horizontale scroll bar aanwezig moet zijn
+              via 'overflow-x'.
+            </li>
+            <li>
+              Via 'background-color' en 'color' veranderen we de kleuren van de
+              achtergrond en de lettertype.
+            </li>
+          </ul>
+        </li>
+        <br/>
+        <li>
+          In de HTML voegde je een simpele boven navigatie toe binnenin de tags
+          'nav'. Hieraan geef je ook stijling via CSS.
+          <ul>
+            <li>
+              De logo heeft een bepaalde breedte. De hoogte wordt hierdoor
+              vanzelf berekend.
+            </li>
+            <li>
+              Door de display aan te passen naar 'flex' en 'justify-content:
+              space-around' toe te voegen, springen de elementen binnen de
+              'nav'-tag naast elkaar en worden ze uit elkaar geduwd.
+            </li>
+            <li>
+              De 'p'-tag binnen de 'div' tag wordt gecentreerd. Dit zijn de
+              namen rechts vanboven.
+            </li>
+          </ul>
+        </li>
+        <br/>
+        <li>
+          Daarna geven we styling aan de kaarten, en de container waarin de
+          kaarten staan. Zo voeren we volgende aanpassingen uit.
+          <ul>
+            <li>
+              Via 'grid' geven we aan dat de kaarten naast elkaar moeten komen,
+              dit telkens met 6 op een rij.
+            </li>
+            <li>
+              Er word enkele stijling gegeven aan een kaart, zoals de kleur, de
+              hoeking van de rand en het centreren van de content binnenin met
+              display, justify-content en align-items.
+            </li>
+            <li>
+              De kaart krijgt een klik-cursor als er over een kaart 'gehovered'
+              wordt.
+            </li>
+            <li>
+              De afbeelding in een kaart krijgt een breedte en hoogte. Deze
+              wordt telkens 20% van de bovenkant van de kaart gepositioneerd.
+            </li>
+            <li>
+              De titel op de kaarten krijgen ook styling. Deze krijgen een
+              zwarte font kleur, een bepaalde font grootte, staan
+              gespositioneerd 215px van de boven van de kaart en worden
+              gecentreerd.
+            </li>
+            <li>
+              De resterende CSS wordt vooral gebruikt om de kaarten om te
+              draaien.
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <h2>Javascript</h2>
+      <h3>Data</h3>
+      <p>
+        Maak in de folder "data" een bestand aan met de naam "cardData.js". Voeg
+        onderstaande data toe aan "cardData.js". De const 'cards' is een array.
+        Een array is altijd omgeven door vierkante haken "[ ]" en is een
+        collectie van items of objecten. Onze array is een collectie van
+        objecten. Elk object besschrijft de id (cardId), afbeeldingslink
+        (cardImage) en titel (cardTitle) van een card. Een object herken je aan
+        de accolades "{ }" die errond staan.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520cards%2520%253D%2520%255B%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25221%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522HTML%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522html.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25222%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522CSS%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522css.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25223%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522JavaScript%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522javascript.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25224%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522C%252B%252B%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522cplus.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25225%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522JSON%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522json.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25226%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522PHP%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522php.png%2522%250A%2520%2520%257D%252C%250A%2520%2520%257B%250A%2520%2520%2520%2520cardId%253A%2520%25227%2522%252C%250A%2520%2520%2520%2520cardTitle%253A%2520%2522MySQL%2522%252C%250A%2520%2520%2520%2520cardImage%253A%2520%2522sql.png%2522%250A%2520%2520%257D%250A%255D"
+        style="
+          width: 299px;
+          height: 763px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <h3>Random cards genereren</h3>
+      <p>
+        Eerst linken we het databestand en het Javascript-bestand in ons
+        html-bestand. Een standaardnaam voor een Javascript-bestand is
+        'script.js'.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%2520%253Cscript%2520src%253D%2522.%252Fdata%252FcardData.js%2522%253E%253C%252Fscript%253E%250A%2520%253Cscript%2520src%253D%2522.%252Fscript%252Fscript.js%2522%253E%253C%252Fscript%253E"
+        style="
+          width: 400px;
+          height: 145px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>Open "script.js" en schrijf de volgende code in dit bestand.</p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=console.log%28%2522Hello%2520world%2522%29%253B"
+        style="
+          width: 265px;
+          height: 93px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Open nu in je applicatie je console. Dit doe je op windows door Shift +
+        CTRL + J in te duwen op Microsoft of Shift + ⌘ + J op MacOS.
+      </p>
+      <p>Zo krijg je "Hello world" in de console te zien.</p>
+      <img src="./img/screenshot1.jpg" alt="De console toont 'Hello World'"/>
+      <p>
+        Vervang de console.log('Hello world') door console.log(cards). Je code
+        ziet er nu zo uit:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=console.log%28cards%29%253B"
+        style="
+          width: 198px;
+          height: 93px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        In de console zie je nu de kaartobjecten die we eerder hebben
+        aangemaakt. Je kan dus in script.js aan de data in cardData.js omdat je
+        deze scripts in je index.html hebt gelinkt.
+      </p>
+      <img
+        src="./img/screenshot2.jpg"
+        alt="De zeven card objects die in de console getoond worden."
+/>
+      <p>
+        Nu gaan we de cards die we eerder hebben gemaakt genereren aan de hand
+        van onze data in cardData.js. We verplaatsen de card HTML nu naar een
+        Javascript functie.
+      </p>
+      <p>
+        In de functie generateHTMLForCards mappen we over de array cards en
+        maken we voor elk object in de array een card element aan. Onze HTML
+        plaatsen we tussen template literals. Dit zijn schuine, enkele haakjes
+        die het toestaan om Javascript te gebruiken binnen HTML.
+      </p>
+      <iframe
+        width="100%"
+        height="300"
+        src="//jsfiddle.net/tess543254/kjus5473/2/embedded/js,html/dark/"
+        allowfullscreen="allowfullscreen"
+        allowpaymentrequest
+        frameborder="0"
+      ></iframe>
+      <p>Geef het resultaat van deze functie weer in de console:</p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=console.log%28generateHTMLForCards%28cards%29%29%253B"
+        style="
+          width: 384px;
+          height: 93px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        In de console krijg je nu de html van al de cards te zien. De cardId,
+        cardImage en cardTitle zijn nu ingevuld met de informatie uit
+        cardData.js.
+      </p>
+      <img
+        src="./img/screenshot3.jpg"
+        alt="De HTML van de cards wordt in de console weergegeven."
+/>
+      <p>
+        Nu moeten we onze cards nog genereren zodat ze zichtbaar worden in de
+        applicatie. Om dit te doen zullen we de code die we net gemaakt hebben
+        aanpassen.
+      </p>
+      <p>
+        Via de getElementById methode haal je het element op met de klasse
+        'all-cards'. Door de methode innerHTML op dit $cardContainer element te
+        gebruiken, kan je de HTML die we in de generateHTMLForCards functie
+        gemaakt hebben binnen de div met klass 'all-cards' plaatsen.
+      </p>
+      <p>
+        Tenslotte roep je de functie generateUIForCards() op om deze tot uiting
+        te brengen.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520%2524cardContainer%2520%253D%2520document.getElementById%28%2522all-cards%2522%29%253B%250A%250A%250Afunction%2520generateHTMLForCards%28cards%29%2520%257B%250A%2520%2520return%2520cards.map%28%28item%29%2520%253D%253E%250A%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2524%257Bitem.cardId%257D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252F%2524%257Bitem.cardImage%257D%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253E%2524%257Bitem.cardTitle%257D%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2560%250A%2520%2520%29.join%28%2522%2522%29%253B%250A%257D%253B%250A%250A%250Afunction%2520generateUIForCards%28%29%2520%257B%250A%2520%2520%2524cardContainer.innerHTML%2520%253D%2520generateHTMLForCards%28cards%29%253B%250A%257D%250A%250A%250AgenerateUIForCards%28%29%253B"
+        style="
+          width: 800px;
+          height: 541px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>Nu zal je de gegenereerde kaartjes zien.</p>
+      <p>Nu willen we de kaarten nog willekeurig kunnen genereren.</p>
+      <p>
+        Om dit te doen maken we twee functies aan. In randomiseCards maken we
+        een functie die de volgorde binnen een array willekeurig maakt. In
+        generateCards zullen we de array cards aanpassen zodat deze willekeurig
+        is en elke kaart twee keer bevat.
+      </p>
+      <p>
+        Maak in randomiseCards gebruik van een for loop. Hierdoor kan de code
+        over elk element in de array gaan en de index veranderen door een
+        willekeurige index.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520randomiseCards%28array%29%2520%257B%250A%2520%2520for%2520%28let%2520i%2520%253D%2520array.length%2520-%25201%253B%2520i%2520%253E%25200%253B%2520i--%29%2520%257B%250A%2520%2520%2520%2520const%2520j%2520%253D%2520Math.floor%28Math.random%28%29%2520*%2520%28i%2520%252B%25201%29%29%253B%250A%2520%2520%2520%2520%255Barray%255Bi%255D%252C%2520array%255Bj%255D%255D%2520%253D%2520%255Barray%255Bj%255D%252C%2520array%255Bi%255D%255D%253B%250A%2520%2520%257D%250A%257D%250A%250Afunction%2520generateCards%28array%29%2520%257B%250A%250A%257D"
+        style="
+          width: 800px;
+          height: 260px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Nu kan je in generateCards de functie randomiseCards gebruiken om de
+        volgorde van de card array willekeurig te maken. Dit doe je door de
+        cards array mee te geven aan de randomiseCards functie. Hierna gebruik
+        je de slice methode om de array 6 elementen lang te worden. Wanneer je
+        totalCards nu logt, krijg je een array van 6 elementen in een
+        willekeurige volgorde terug.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520generateCards%28%29%2520%257B%250A%2520%2520randomiseCards%28cards%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 167px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Omdat je in memory op zoek moet naar twee dezelfde kaarten, moet je nu
+        de objecten in de array verdubbelen. Dit kan je doen aan de hand van een
+        flatMap.
+      </p>
+      <p>
+        Hierna gebruik je de randomiseCards functie op de totalCards zodat de 12
+        objecten in een willekeurige volgorde gezet worden.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520generateCards%28array%29%2520%257B%250A%2520%2520randomiseCards%28cards%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%250A%2520%2520totalCards%2520%253D%2520totalCards.flatMap%28%28i%29%2520%253D%253E%2520%255Bi%252C%2520i%255D%29%253B%250A%250A%2520%2520randomiseCards%28totalCards%29%253B%250A%250A%2520%2520return%2520totalCards%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 279px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Nu kan je de generateCards functie gebruiken in de generateUIForCards
+        functie om een array van 12 objecten te maken die aan de
+        generateHTMLForCards functie meegegeven kan worden.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520generateUIForCards%28%29%2520%257B%250A%2520%2520const%2520randomCards%2520%253D%2520generateCards%28cards%29%253B%250A%2520%2520%2524cardContainer.innerHTML%2520%253D%2520generateHTMLForCards%28randomCards%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 148px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>Nu ziet je code er zo uit:</p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28171%2C184%2C195%2C0%29&t=seti&wt=none&l=auto&width=800&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520%2524cardContainer%2520%253D%2520document.getElementById%28%2522all-cards%2522%29%253B%250A%250Afunction%2520randomiseCards%28array%29%2520%257B%250A%2520%2520for%2520%28let%2520i%2520%253D%2520array.length%2520-%25201%253B%2520i%2520%253E%25200%253B%2520i--%29%2520%257B%250A%2520%2520%2520%2520const%2520j%2520%253D%2520Math.floor%28Math.random%28%29%2520*%2520%28i%2520%252B%25201%29%29%253B%250A%2520%2520%2520%2520%255Barray%255Bi%255D%252C%2520array%255Bj%255D%255D%2520%253D%2520%255Barray%255Bj%255D%252C%2520array%255Bi%255D%255D%253B%250A%2520%2520%257D%250A%257D%250A%250Afunction%2520generateCards%28array%29%2520%257B%250A%2520%2520randomiseCards%28array%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%250A%2520%2520totalCards%2520%253D%2520totalCards.flatMap%28%28i%29%2520%253D%253E%2520%255Bi%252C%2520i%255D%29%253B%250A%250A%2520%2520randomiseCards%28totalCards%29%253B%250A%250A%2520%2520return%2520totalCards%253B%250A%257D%250A%250Afunction%2520generateHTMLForCards%28cards%29%2520%257B%250A%2520%2520return%2520cards%250A%2520%2520%2520%2520.map%28%250A%2520%2520%2520%2520%2520%2520%28item%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2524%257Bitem.cardId%257D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252F%2524%257Bitem.cardImage%257D%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253E%2524%257Bitem.cardTitle%257D%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%29%250A%2520%2520%2520%2520.join%28%2522%2522%29%253B%250A%257D%250A%250Afunction%2520generateUIForCards%28%29%2520%257B%250A%2520%2520const%2520randomCards%2520%253D%2520generateCards%28cards%29%253B%250A%2520%2520%2524cardContainer.innerHTML%2520%253D%2520generateHTMLForCards%28randomCards%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 893px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Nu schrijven we de logica om te controleren of twee aangeklikte kaarten
+        gelijk zijn aan elkaar. Maak een functie 'checkCards()' aan, tussen de
+        functie 'generateHTMLForCards(cards) en 'generateUIForCards()'. Eerst
+        moeten we dus de kaarten aanklikbaar maken, dit doen we door alle
+        kaarten die in de HTML zitten te overlopen (dit noemt men itereren) en
+        aan elke kaart een event listener toe te voegen. Dit doet exact wat het
+        zegt, het 'luistert' voor events. Je code zal er zo uitzien:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520checkCards%28%29%2520%257B%250A%2520%2520%2520%2520const%2520%2524allCards%2520%253D%2520document.querySelectorAll%28%2522.card%2522%29%253B%250A%2520%2520%250A%2520%2520%2520%2520%2524allCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520card.addEventListener%28%2522click%2522%252C%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log%28%2522Card%2520click%2522%29%250A%2520%2520%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%257D%29%250A%257D"
+        style="
+          width: 800px;
+          height: 260px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Telkens als je op een kaart klikt, zal je nu 'Card clicked' in je
+        console zien.
+      </p>
+      <p>
+        In de CSS hebben we een klasse 'flipped' toegevoegd. Dit voegen we toe
+        en verwijderen we telkens als we op de kaart klikken. Vervang
+        'console.log("Card clicked");' door onderstaande code:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=card.classList.toggle%28%2522flipped%2522%29%253B"
+        style="
+          width: 800px;
+          height: 76px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Om te weten of er 2 kaarten aangeklikt zijn, slaan we de aangeklikte
+        kaarten op in een array. Een array is een lijst van gegevens/waardes. Om
+        een array te gebruiken, maken we er eerst één aan. Later zullen we ook
+        een counter nodig hebben. Deze voegen we ook al toe. Kopieer
+        onderstaande code toe onder de constante $allCards:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=let%2520selectedCards%2520%253D%2520%255B%255D%253B%250A%250Alet%2520counter%2520%253D%25200%253B%250A"
+        style="
+          width: 800px;
+          height: 148px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Het voornaamste verschil tussen een 'let' en een 'const' is dat een
+        'let' waarde aangepast kan worden na het aanmaken. Een 'const' waarde
+        blijft constant.
+      </p>
+
+      <p>
+        Voor elke kaart die geklikt wordt, 'pushen' we deze in de array. Dus
+        onderstaande code voeg je toe onder de 'flipped' klasse die getoggeled
+        wordt.
+      </p>
+
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=selectedCards.push%28card%29%253B"
+        style="
+          width: 800px;
+          height: 76px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Daarna kijken we of er 2 kaarten geselecteerd zijn door te kijken of de
+        lengte van de array gelijk is aan 2. Om te kijken of dit stukje code
+        juist is, voegen we tijdelijk een console.log toe. De code van de
+        functie 'checkCards' ziet er ondertussen als volgt uit:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=function%2520checkCards%28%29%2520%257B%250A%2520%2520const%2520%2524allCards%2520%253D%2520document.querySelectorAll%28%2522.card%2522%29%253B%250A%250A%2520%2520let%2520selectedCards%2520%253D%2520%255B%255D%253B%250A%2520%2520%250A%2520%2520let%2520counter%2520%253D%25200%253B%250A%250A%2520%2520%2524allCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520card.addEventListener%28%2522click%2522%252C%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%250A%2520%2520%2520%2520%2520%2520selectedCards.push%28card%29%253B%250A%250A%2520%2520%2520%2520%2520%2520if%2520%28selectedCards.length%2520%253D%253D%253D%25202%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520console.log%28%2522Two%2520cards%2520are%2520clicked%2522%29%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%257D%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 428px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        In een memory card spel worden 2 kaarten, die je omdraait door erop te
+        klikken, gecontroleerd worden of deze gelijk zijn. Het vergelijken doen
+        we op basis van de 'data-id' die je in HTML hebt toegevoegd. Elke kaart
+        heeft een unique id, en deze zijn opgeslagen in de array
+        'selectedCards'.
+      </p>
+
+      <p>
+        In de if-statement waar gekeken wordt naar de lengte van
+        'selectedCards', voeg je onderstaande code toe. 'console.log("Two cards
+        are selected");' mag je vervangen door:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=if%2520%28selectedCards%255B0%255D.dataset.id%2520%253D%253D%253D%2520selectedCards%255B1%255D.dataset.id%29%2520%257B%250A%2520%2520console.log%28%2522Cards%2520are%2520the%2520same%2522%29%250A%257D%250Aelse%2520%257B%250A%2520%2520console.log%28%2522Cards%2520are%2520not%2520the%2520same%2522%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 186px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Het stukje in de 'if'-haakjes wordt uitgevoerd als de kaarten gelijk
+        zijn. Alle code tussen de 'else'-haakjes wordt alleen uitgevoerd als de
+        kaarten niet gelijk zijn aan elkaar.
+      </p>
+
+      <p>Bij 2 gelijke kaarten moet:</p>
+      <ul>
+        <li>de 'counter' plus 1 gedaan worden;</li>
+        <li>en moet de aanklikbaarheid voor elke kaart verwijderd worden.</li>
+      </ul>
+      <p>
+        Dit wordt uitgevoerd door deze code toe te voegen tussen de
+        'if'-haakjes.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=counter%252B%252B%253B%250A%250AselectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2509card.style.pointerEvents%2520%253D%2520%2522none%2522%253B%250A%257D%29%253B"
+        style="
+          width: 800px;
+          height: 167px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>Als twee kaarten niet gelijk zijn aan elkaar moet:</p>
+      <ul>
+        <li>de kaarten eventjes getoond worden;</li>
+        <li>en daarna weer omgedraaid worden.</li>
+      </ul>
+      <p>
+        Daarom gebruiken 'setTimeout' en toggelen we weer de klasse 'flipped'.
+        Voeg deze code toe tussen de haakjes van 'else':
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520setTimeout%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%2520%2520%257D%252C%2520500%29%253B%250A%257D%29%253B"
+        style="
+          width: 800px;
+          height: 167px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>Ondertussen ziet de if-statement er als volgt uit:</p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=if%2520%28selectedCards%255B0%255D.dataset.id%2520%253D%253D%253D%2520selectedCards%255B1%255D.dataset.id%29%2520%257B%250A%2520%2520counter%252B%252B%253B%250A%250A%2520%2520selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2509card.style.pointerEvents%2520%253D%2520%2522none%2522%253B%250A%2520%2520%257D%29%253B%250A%257D%2520else%2520%257B%250A%2520%2520selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520setTimeout%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%2520%2520%2520%2520%257D%252C%2520500%29%253B%250A%2520%2520%257D%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 316px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <p>
+        Na beide statements, dus gelijke of niet gelijke kaarten, moet de array
+        'selectedCards' geleegd worden voor de volgende twee kaarten. Voeg onder
+        de gehele if-statement dat stukje logica toe:
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=selectedCards%2520%253D%2520%255B%255D%253B"
+        style="
+          width: 800px;
+          height: 93px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Vergeet dan ook niet in de functie 'generateUIForCards()' de functie
+        'checkCards()' op te roepen, en de functie 'generateUIForCards' opnieuw
+        op te roepen helemaal op het einde.
+      </p>
+      <p>Als alles goed is verlopen, ziet je script.js bestand er zo uit:</p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520%2524cardContainer%2520%253D%2520document.getElementById%28%2522all-cards%2522%29%253B%250A%250Afunction%2520randomiseCards%28array%29%2520%257B%250A%2520%2520for%2520%28let%2520i%2520%253D%2520array.length%2520-%25201%253B%2520i%2520%253E%25200%253B%2520i--%29%2520%257B%250A%2520%2520%2520%2520const%2520j%2520%253D%2520Math.floor%28Math.random%28%29%2520*%2520%28i%2520%252B%25201%29%29%253B%250A%2520%2520%2520%2520%255Barray%255Bi%255D%252C%2520array%255Bj%255D%255D%2520%253D%2520%255Barray%255Bj%255D%252C%2520array%255Bi%255D%255D%253B%250A%2520%2520%257D%250A%257D%250A%250Afunction%2520generateCards%28array%29%2520%257B%250A%2520%2520randomiseCards%28array%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%250A%2520%2520totalCards%2520%253D%2520totalCards.flatMap%28%28i%29%2520%253D%253E%2520%255Bi%252C%2520i%255D%29%253B%250A%250A%2520%2520randomiseCards%28totalCards%29%253B%250A%250A%2520%2520return%2520totalCards%253B%250A%257D%250A%250Afunction%2520generateHTMLForCards%28cards%29%2520%257B%250A%2520%2520return%2520cards%250A%2520%2520%2520%2520.map%28%250A%2520%2520%2520%2520%2520%2520%28item%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2524%257Bitem.cardId%257D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252F%2524%257Bitem.cardImage%257D%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253E%2524%257Bitem.cardTitle%257D%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%29%250A%2520%2520%2520%2520.join%28%2522%2522%29%253B%250A%257D%250A%250A%250Afunction%2520checkCards%28%29%2520%257B%250A%2520%2520const%2520%2524allCards%2520%253D%2520document.querySelectorAll%28%2522.card%2522%29%253B%250A%250A%2520%2520let%2520selectedCards%2520%253D%2520%255B%255D%253B%250A%250A%2520%2520let%2520counter%2520%253D%25200%253B%250A%250A%2520%2520%2524allCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520card.addEventListener%28%2522click%2522%252C%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%250A%2520%2520%2520%2520%2520%2520selectedCards.push%28card%29%253B%250A%250A%2520%2520%2520%2520%2520%2520if%2520%28selectedCards.length%2520%253D%253D%253D%25202%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28selectedCards%255B0%255D.dataset.id%2520%253D%253D%253D%2520selectedCards%255B1%255D.dataset.id%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520counter%252B%252B%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520card.style.pointerEvents%2520%253D%2520%2522none%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520setTimeout%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%2520500%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520selectedCards%2520%253D%2520%255B%255D%253B%250A%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%257D%29%253B%250A%257D%250A%250Afunction%2520generateUIForCards%28%29%2520%257B%250A%2520%2520const%2520randomCards%2520%253D%2520generateCards%28cards%29%253B%250A%2520%2520%2524cardContainer.innerHTML%2520%253D%2520generateHTMLForCards%28randomCards%29%253B%250A%2520%2520checkCards%28%29%253B%250A%257D%250A%250AgenerateUIForCards%28%29%253B"
+        style="
+          width: 800px;
+          height: 1619px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Heb je deze code? Super! Dan kan je jouw geheugen al testen door een
+        spel te spelen.
+      </p>
+      <p>
+        Wij zullen nog even tonen hoe je een leuke beïndiging van het spel kunt
+        toevoegen, en hoe je de website vanzelf opnieuw kan laden om het spel
+        opnieuw te spelen.
+      </p>
+
+      <p>
+        Eerder voegden we een counter toe, die de waarde 0 heeft. Nadat de
+        selectedCards array geleegd is, kijken we of deze counter op 6 staat,
+        dus als alle paren gevonden zijn. Nu kijken we met een 'if'-statement of
+        deze gelijk is aan 6. Als dat zo is, wordt er een vensterboxje getoond
+        na 3,5 seconden, en wordt de pagina herladen als je de venster wegklikt.
+      </p>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=if%2520%28counter%2520%253D%253D%253D%25206%29%2520%257B%250A%2520%2520setTimeout%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520alert%28%2522Congratulations%21%2520You%2520have%2520found%2520all%2520the%2520combinations%21%2522%29%253B%250A%2520%2520%2520%2520location.reload%28%29%253B%250A%2520%2520%257D%252C%25203500%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 186px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Wat is een spel, zonder een confetti einde? Daarom tonen we nu ook hoe
+        je een feestelijke einde kunt toevoegen.
+      </p>
+      <p>
+        Je zal zeker en vast leren dat in programmeren het internet een zeer
+        handig hulpmiddel is. Via
+        <a href="https://confetti.js.org/more.html" target="_blank"
+          >deze website</a
+        >
+        vind je een heleboel manieren hoe je confetti kunt toevoegen aan
+        eenderwelke website. Wij hebben gekozen om 'School Pride'-confetti toe
+        te voegen, maar jij kan je eigen draai geven aan het spel en een andere
+        kiezen. De code hiervan kopieer je en plak je in de 'if'-statement van
+        de counter:
+      </p>
+
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=if%2520%28counter%2520%253D%253D%253D%25206%29%2520%257B%250A%2520%2520const%2520end%2520%253D%2520Date.now%28%29%2520%252B%252015%2520*%25201000%253B%250A%250A%2520%2520const%2520colors%2520%253D%2520%255B%2522%2523EE9900%2522%252C%2520%2522%252300AACC%2522%252C%2520%2522%2523CE0C7D%2522%255D%253B%250A%250A%2520%2520%28function%2520frame%28%29%2520%257B%250A%2520%2520%2520%2520confetti%28%257B%250A%2520%2520%2520%2520%2520%2520particleCount%253A%25202%252C%250A%2520%2520%2520%2520%2520%2520angle%253A%252060%252C%250A%2520%2520%2520%2520%2520%2520spread%253A%252055%252C%250A%2520%2520%2520%2520%2520%2520origin%253A%2520%257B%2520x%253A%25200%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520colors%253A%2520colors%252C%250A%2520%2520%2520%2520%257D%29%253B%250A%250A%2520%2520%2520%2520confetti%28%257B%250A%2520%2520%2520%2520%2520%2520particleCount%253A%25202%252C%250A%2520%2520%2520%2520%2520%2520angle%253A%2520120%252C%250A%2520%2520%2520%2520%2520%2520spread%253A%252055%252C%250A%2520%2520%2520%2520%2520%2520origin%253A%2520%257B%2520x%253A%25201%2520%257D%252C%250A%2520%2520%2520%2520%2520%2520colors%253A%2520colors%252C%250A%2520%2520%2520%2520%257D%29%253B%250A%250A%2520%2520%2520%2520if%2520%28Date.now%28%29%2520%253C%2520end%29%2520%257B%250A%2520%2520%2520%2520%2520%2520requestAnimationFrame%28frame%29%253B%250A%2520%2520%2520%2520%257D%250A%2520%2520%257D%29%28%29%253B%250A%250A%2520%2520setTimeout%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520alert%28%2522Congratulations%21%2520You%2520have%2520found%2520all%2520the%2520combinations%21%2522%29%253B%250A%2520%2520%2520%2520location.reload%28%29%253B%250A%2520%2520%257D%252C%25203500%29%253B%250A%257D"
+        style="
+          width: 800px;
+          height: 670px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <p>
+        Wij hebben ook de kleuren aangepast, zodat deze beter past met de andere
+        kleuren.
+      </p>
+
+      <p>Jouw afgewerkt script.js zou er als volgt moeten uitzien:</p>
+
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%2840%2C89%2C127%2C0%29&t=seti&wt=none&l=javascript&width=780&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520%2524cardContainer%2520%253D%2520document.getElementById%28%2522all-cards%2522%29%253B%250A%250Afunction%2520randomiseCards%28array%29%2520%257B%250A%2520%2520for%2520%28let%2520i%2520%253D%2520array.length%2520-%25201%253B%2520i%2520%253E%25200%253B%2520i--%29%2520%257B%250A%2520%2520%2520%2520const%2520j%2520%253D%2520Math.floor%28Math.random%28%29%2520*%2520%28i%2520%252B%25201%29%29%253B%250A%2520%2520%2520%2520%255Barray%255Bi%255D%252C%2520array%255Bj%255D%255D%2520%253D%2520%255Barray%255Bj%255D%252C%2520array%255Bi%255D%255D%253B%250A%2520%2520%257D%250A%257D%250A%250Afunction%2520generateCards%28array%29%2520%257B%250A%2520%2520randomiseCards%28array%29%253B%250A%250A%2520%2520let%2520totalCards%2520%253D%2520array.slice%280%252C%25206%29%253B%250A%250A%2520%2520totalCards%2520%253D%2520totalCards.flatMap%28%28i%29%2520%253D%253E%2520%255Bi%252C%2520i%255D%29%253B%250A%250A%2520%2520randomiseCards%28totalCards%29%253B%250A%250A%2520%2520return%2520totalCards%253B%250A%257D%250A%250Afunction%2520generateHTMLForCards%28cards%29%2520%257B%250A%2520%2520return%2520cards%250A%2520%2520%2520%2520.map%28%250A%2520%2520%2520%2520%2520%2520%28item%29%2520%253D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card%2522%2520data-id%253D%2524%257Bitem.cardId%257D%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__inside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__front%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520class%253D%2522card__image%2522%2520src%253D%2522.%252Fimages%252F%2524%257Bitem.cardImage%257D%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__title%2522%253E%2524%257Bitem.cardTitle%257D%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cdiv%2520class%253D%2522card__back%2522%253E%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2560%250A%2520%2520%2520%2520%29%250A%2520%2520%2520%2520.join%28%2522%2522%29%253B%250A%257D%250A%250A%250Afunction%2520checkCards%28%29%2520%257B%250A%2520%2520const%2520%2524allCards%2520%253D%2520document.querySelectorAll%28%2522.card%2522%29%253B%250A%250A%2520%2520let%2520selectedCards%2520%253D%2520%255B%255D%253B%250A%250A%2520%2520let%2520counter%2520%253D%25200%253B%250A%250A%2520%2520%2524allCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520card.addEventListener%28%2522click%2522%252C%2520function%2520%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%250A%2520%2520%2520%2520%2520%2520selectedCards.push%28card%29%253B%250A%250A%2520%2520%2520%2520%2520%2520if%2520%28selectedCards.length%2520%253D%253D%253D%25202%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28selectedCards%255B0%255D.dataset.id%2520%253D%253D%253D%2520selectedCards%255B1%255D.dataset.id%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520counter%252B%252B%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520card.style.pointerEvents%2520%253D%2520%2522none%2522%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520else%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520selectedCards.forEach%28%28card%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520setTimeout%28%28%29%2520%253D%253E%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520card.classList.toggle%28%2522flipped%2522%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%252C%2520500%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520selectedCards%2520%253D%2520%255B%255D%253B%250A%2520%2520%2520%2520%2520%2520%2520%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520if%2520%28counter%2520%253D%253D%253D%25206%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520const%2520end%2520%253D%2520Date.now%28%29%2520%252B%252015%2520*%25201000%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520const%2520colors%2520%253D%2520%255B%2522%2523EE9900%2522%252C%2520%2522%252300AACC%2522%252C%2520%2522%2523CE0C7D%2522%255D%253B%250A%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%28function%2520frame%28%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520confetti%28%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520particleCount%253A%25202%252C%250A%2520%2520%2520%2520%2520"
+        style="
+          width: 800px;
+          height: 2233px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+
+      <h2>Extra!</h2>
+      <ul>
+        <li>
+          In de CSS file staat helemaal bij ":root" enkele kleuren. Deze kan je
+          zelf aanpassen naar de kleuren die jij wilt.
+        </li>
+        <li>
+          Je kan in de data file extra kaarten toevoegen, of de thema veranderen
+          naar wat jij wilt. Vergeet hierbij niet alle nodige data in script.js
+          aan te passen!
+        </li>
+      </ul>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/db5fbe6cb2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

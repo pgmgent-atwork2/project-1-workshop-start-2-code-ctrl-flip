@@ -85,8 +85,8 @@ button {
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  color: white;
+  text-decoration: none;
 }
 ul {
   list-style: none;
