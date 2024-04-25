@@ -24,6 +24,7 @@ body {
   width: 100%;
   justify-content: space-around;
   margin-bottom: 1rem;
+  align-items: center;
 }
 
 .all-cards {
@@ -87,7 +88,12 @@ body {
   top: 20px;
   object-fit: contain;
 }
-
+.card__image--back {
+  object-fit: contain;
+  width: 100%;
+  position: absolute;
+  top: 95px;
+}
 .card__title {
   width: 100%;
   top: 215px;
@@ -99,4 +105,14 @@ body {
 
 div p {
   text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #3ba3d9;
+}
+
+a:hover {
+  color: #ee9900;
+  text-decoration: underline;
+  text-decoration-color: #ee9900;
 }
